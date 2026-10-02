@@ -6,6 +6,12 @@
 
 ## 2026-10-02 fredag
 
+### Python environment
+
+* `pip install datasets` 
+
+---------------------------------------------
+
 ## 2026-10-01 torsdag
 
 ### Data
@@ -28,9 +34,17 @@ Bu birleşme Filipinler'deki ilk gazete birleşmesidir.
 "You may use an existing implementation such as SentencePiece or the Hugging Face tokenizers library."
 
 
-### Hugginface
+### Hugginface tokenizers
 * https://huggingface.co/docs/tokenizers/en/index
 
 ### Python environment
+* `python -m venv .venv`
+* `source .venv/bin/activate`
+* `pip install --upgrade pip`
+* `pip install matplotlib torch jupyter` 
+* `python -m ipykernel install --user --name ml2_a1_ht26`
+* `pip install tokenizers`
+* `pip install transformers`
 
-`` 
+
+

@@ -6,8 +6,30 @@
 
 ## 2026-10-02 fredag
 
-### Python environment
+```
+Failed to load JSON from file '/srv/data/lt2326-h26/a1/train/en.txt' with error <class 'pyarrow.lib.ArrowInvalid'>: JSON parse error: Invalid value. in row 0
+```
 
+Anledning: missade att sätta "text" när jag anropade load_dataset().
+
+```
+TypeError: 'DatasetDict' object is not an instance of 'Sequence'
+while processing 'files'
+```
+
+Anledning: Använda load_dataset, men borde bara ha laddat in filerna as-is (och bara train-filerna). 
+
+### Förtokeniserare
+
+* Hur tokeniserar man kinesiska?
+Verkar vara *SentencePiece* som gäller: https://huggingface.co/learn/llm-course/en/chapter6/4
+
+* https://huggingface.co/docs/tokenizers/en/api/pre-tokenizers
+* https://huggingface.co/docs/tokenizers/python/latest/components.html#pre-tokenizers
+
+
+
+### Python environment
 * `pip install datasets` 
 
 ---------------------------------------------
